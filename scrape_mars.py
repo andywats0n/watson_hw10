@@ -23,6 +23,7 @@ def scrape():
 
     # GET imgs
     img_url = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
+    browser.click_link_by_id('full_image')
     img_soup = make_soup(img_url)
 
     img_el = img_soup.body.find('img', class_='fancybox-image')
